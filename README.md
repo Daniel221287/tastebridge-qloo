@@ -4,6 +4,13 @@
 
 Built for the Qloo Agentic Hackathon. Every title, score and tag it shows comes from a Qloo API response: TasteBridge uses no LLM and never invents results.
 
+## Try it
+
+- **Live web demo:** https://tastebridge-qloo.onrender.com/ (free hosting: the first request after a quiet period can take up to a minute while the server wakes up)
+- **Live MCP endpoint (Streamable HTTP):** `https://tastebridge-qloo.onrender.com/mcp` with 5 read-only tools; see [MCP tools](#mcp-tools)
+- **Health check:** https://tastebridge-qloo.onrender.com/health
+- The public server is rate-limited to 30 requests per minute per IP and keeps the Qloo API key server-side.
+
 ## The problem
 
 Most recommenders serve one person. Real choices are shared: a couple picking a film, friends choosing a book-club title, travel buddies looking for a bar in a new city. Splitting the difference by hand usually ends with whatever one person already likes.
