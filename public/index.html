@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TasteBridge - common ground for two tastes</title>
+  <meta name="description" content="TasteBridge finds movies, books, music, places and trips two people will both enjoy, using the Qloo Taste AI API.">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap brand">
+      <svg class="mark" viewBox="0 0 64 40" aria-hidden="true"><circle cx="22" cy="20" r="16" class="ma"/><circle cx="42" cy="20" r="16" class="mb"/></svg>
+      <div>
+        <h1>TasteBridge</h1>
+        <p class="tag">Common ground for two tastes, powered by Qloo's Taste AI</p>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <p id="keyBanner" class="banner" hidden>The server has no Qloo API key configured, so searches will fail. Add QLOO_API_KEY to .env and restart.</p>
+
+    <section class="card" aria-labelledby="formTitle">
+      <h2 id="formTitle">Who is choosing?</h2>
+      <p class="hint">List up to 5 favorites per person, one per line: movies, shows, books, artists, games, places. Prefixes like <code>book:</code> or <code>artist:</code> pin the type.</p>
+      <div class="examples" role="group" aria-label="Examples">
+        <span>Try:</span>
+        <button type="button" class="chip" data-example="0">Movie night</button>
+        <button type="button" class="chip" data-example="1">Book club</button>
+        <button type="button" class="chip" data-example="2">Lisbon evening</button>
+        <button type="button" class="chip" data-example="3">Road-trip podcasts</button>
+      </div>
+      <form id="form" novalidate>
+        <div class="people">
+          <fieldset class="person pa">
+            <legend><input id="aName" class="name" value="Alex" maxlength="40" aria-label="First person's name"></legend>
+            <label for="aFav">Favorites</label>
+            <textarea id="aFav" rows="5" required placeholder="Amelie&#10;Daft Punk&#10;book: Dune"></textarea>
+          </fieldset>
+          <fieldset class="person pb">
+            <legend><input id="bName" class="name" value="Sam" maxlength="40" aria-label="Second person's name"></legend>
+            <label for="bFav">Favorites</label>
+            <textarea id="bFav" rows="5" required placeholder="Blade Runner&#10;Interstellar"></textarea>
+          </fieldset>
+        </div>
+        <div class="options">
+          <label>Looking for
+            <select id="category">
+              <option value="movies">Movies</option>
+              <option value="tv">TV shows</option>
+              <option value="books">Books</option>
+              <option value="music">Music artists</option>
+              <option value="podcasts">Podcasts</option>
+              <option value="games">Video games</option>
+              <option value="places">Places (needs a city)</option>
+              <option value="destinations">Travel destinations</option>
+              <option value="brands">Brands</option>
+            </select>
+          </label>
+          <label>City or area <span id="locReq" class="req" hidden>required</span>
+            <input id="location" maxlength="80" placeholder="optional, e.g. Lisbon">
+          </label>
+          <label>Picks
+            <select id="count"><option>3</option><option selected>5</option><option>8</option></select>
+          </label>
+          <button id="go" type="submit" class="go">Find common ground</button>
+        </div>
+        <p id="formError" class="error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <p id="status" class="status" role="status" aria-live="polite"></p>
+    <div id="results" hidden></div>
+  </main>
+
+  <footer class="wrap foot">
+    <p>Every title, score and tag on this page comes from the Qloo API. TasteBridge uses no LLM and never invents results.</p>
+    <p>AI agents can use the same tools over MCP at <code>/mcp</code> (Streamable HTTP).</p>
+  </footer>
+  <script src="/app.js" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+node_modules/
+.env
+.env.*
+!.env.example
+*.key
+*.pem
+logs/
+submission-assets/
+__pycache__/
+*.pyc
+_archive_python_prototype/
+
+# Local form preparation / personal data - NEVER COMMIT
+_form_*.py
+_make_form_prefill.py
+_verify_form_prefill.py
+qloo-prefilled-link.txt
