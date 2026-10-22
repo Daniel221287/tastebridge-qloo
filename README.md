@@ -6,6 +6,7 @@ Built for the Qloo Agentic Hackathon. Every title, score and tag it shows comes 
 
 ## Try it
 
+- **Demo video (2 min):** https://youtu.be/ngbumwRlxSo (a screen recording of the public demo and of live MCP calls, with English captions)
 - **Live web demo:** https://tastebridge-qloo.onrender.com/ (free hosting: the first request after a quiet period can take up to a minute while the server wakes up)
 - **Live MCP endpoint (Streamable HTTP):** `https://tastebridge-qloo.onrender.com/mcp` with 5 read-only tools; see [MCP tools](#mcp-tools)
 - **Health check:** https://tastebridge-qloo.onrender.com/health
