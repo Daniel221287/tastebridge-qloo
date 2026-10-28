@@ -4,6 +4,10 @@
 
 Built for the Qloo Agentic Hackathon. Every title, score and tag it shows comes from a Qloo API response: TasteBridge uses no LLM and never invents results.
 
+[![Watch TasteBridge find common ground with Qloo (2:00)](https://i.ytimg.com/vi/ngbumwRlxSo/hqdefault.jpg)](https://www.youtube.com/watch?v=ngbumwRlxSo)
+
+**Watch the two-minute demo** of the live web app and MCP tools, then [try TasteBridge](https://tastebridge-qloo.onrender.com/). If it helps you build taste-aware agents, consider starring the repository.
+
 ## Try it
 
 - **Demo video (2 min):** https://youtu.be/ngbumwRlxSo (a screen recording of the public demo and of live MCP calls, with English captions)
